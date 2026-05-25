@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1779149161630' stop='1779149192303'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1779149192302' status='broken' stop='1779149192302'>
+            <name>"before all" hook for "should open portfolio site and submit contact form"</name>
+            <title>"before all" hook for "should open portfolio site and submit contact form"</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>session not created: This version of ChromeDriver only supports Chrome version 145
+                Current browser version is 147.0.7727.56 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe</message>
+                <stack-trace>SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 145
+                Current browser version is 147.0.7727.56 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+                    at Object.throwDecodedError (node_modules\selenium-webdriver\lib\error.js:523:15)
+                    at parseHttpResponse (node_modules\selenium-webdriver\lib\http.js:526:13)
+                    at Executor.execute (node_modules\selenium-webdriver\lib\http.js:458:28)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1779696172359' stop='1779696184190'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1779696173154' status='broken' stop='1779696184148'>
+            <name>should open portfolio site and submit contact form</name>
+            <title>should open portfolio site and submit contact form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Invalid locator</message>
+                <stack-trace>TypeError: Invalid locator
+                    at Object.check [as checkedLocator] (node_modules\selenium-webdriver\lib\by.js:469:9)
+                    at Driver.findElement (node_modules\selenium-webdriver\lib\webdriver.js:1005:20)
+                    at HomePage.fillContactForm (pages\HomePage.js:26:23)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async Context.&lt;anonymous> (tests\ContactForm.test.js:32:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

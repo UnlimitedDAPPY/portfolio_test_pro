@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1779695975186' stop='1779695990750'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1779695975930' status='broken' stop='1779695990706'>
+            <name>should open portfolio site and submit contact form</name>
+            <title>should open portfolio site and submit contact form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Send')]"}
+                  (Session info: chrome=148.0.7778.168)</message>
+                <stack-trace>NoSuchElementError: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Send')]"}
+                  (Session info: chrome=148.0.7778.168)
+                    at Object.throwDecodedError (node_modules\selenium-webdriver\lib\error.js:523:15)
+                    at parseHttpResponse (node_modules\selenium-webdriver\lib\http.js:526:13)
+                    at Executor.execute (node_modules\selenium-webdriver\lib\http.js:458:28)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async Driver.execute (node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+                    at async toWireValue (node_modules\selenium-webdriver\lib\webdriver.js:149:15)
+                    at async C:\Users\PRECISION 5530\Desktop\ALL\portfolio_test_pro\node_modules\selenium-webdriver\lib\webdriver.js:195:16
+                    at async forEachKey (node_modules\selenium-webdriver\lib\webdriver.js:189:9)
+                    at async convertKeys (node_modules\selenium-webdriver\lib\webdriver.js:194:3)
+                    at async Driver.execute (node_modules\selenium-webdriver\lib\webdriver.js:743:22)
+                    at async HomePage.submitForm (pages\HomePage.js:30:5)
+                    at async Context.&lt;anonymous> (tests\ContactForm.test.js:40:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

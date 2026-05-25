@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1779145528870' stop='1779145549570'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1779145549569' status='broken' stop='1779145549570'>
+            <name>"before all" hook for "should open portfolio site and submit contact form"</name>
+            <title>"before all" hook for "should open portfolio site and submit contact form"</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Cannot read properties of undefined (reading 'quit')</message>
+                <stack-trace>TypeError: Cannot read properties of undefined (reading 'quit')
+                    at Context.&lt;anonymous> (tests\ContactForm.js:15:18)
+                    at process.processImmediate (node:internal/timers:491:21)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,1 @@
+{"a323e1f6b8346a1fab7c4ad9078102":{"statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"cd013fc8c5913ec9","status":"broken","statusDetails":"Cannot read properties of undefined (reading 'quit')","time":{"start":1779145549569,"stop":1779145549570,"duration":1}}]}}
