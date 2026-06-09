@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1781002662704' stop='1781002664246'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1781002663831' status='broken' stop='1781002664154'>
+            <name>should open portfolio site and submit contact form</name>
+            <title>should open portfolio site and submit contact form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>unknown error: net::ERR_INTERNET_DISCONNECTED
+                  (Session info: chrome=149.0.7827.53)</message>
+                <stack-trace>WebDriverError: unknown error: net::ERR_INTERNET_DISCONNECTED
+                  (Session info: chrome=149.0.7827.53)
+                    at Object.throwDecodedError (node_modules\selenium-webdriver\lib\error.js:523:15)
+                    at parseHttpResponse (node_modules\selenium-webdriver\lib\http.js:526:13)
+                    at Executor.execute (node_modules\selenium-webdriver\lib\http.js:458:28)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async Driver.execute (node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+                    at async HomePage.openWebsite (pages\HomePage.js:18:5)
+                    at async Context.&lt;anonymous> (tests\ContactForm.test.js:28:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

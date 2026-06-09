@@ -1,7 +1,6 @@
 const { expect } = require("chai");
 const buildDriver = require("../utils/driver");
 const HomePage = require("../pages/HomePage");
-const { waitForElement, waitForVisible } = require("../utils/waits");
 const { takeScreenshot } = require("../utils/screenshot");
 
 describe("Portfolio Contact Form Test", function () {
@@ -13,14 +12,14 @@ describe("Portfolio Contact Form Test", function () {
     homePage = new HomePage(driver);
   });
 
- after(async function () {
-  if (driver) {
-    await driver.quit();
-  }
-}); 
+  after(async function () {
+    if (driver) {
+      await driver.quit();
+    }
+  });
 
-   afterEach(async function () {
-    const status = this.currentTest.state; // passed or failed
+  afterEach(async function () {
+    const status = this.currentTest.state;
     await takeScreenshot(driver, this.currentTest.title, status);
   });
 
@@ -32,19 +31,8 @@ describe("Portfolio Contact Form Test", function () {
 
     expect(title).to.not.be.empty;
 
-    // await driver.sleep(1000);
-      await waitForElement(driver, homePage.contactLink);
-    const contactElement = await driver.findElement(homePage.contactLink);
-
-await waitForVisible(driver, contactElement);
-
-await contactElement.click();
-
-
-
-    // await driver.sleep(1000);
-    const nameLocator = homePage.nameInput;
-    await waitForElement(driver, nameLocator);
+    // 👉 use POM methods (NOT raw driver calls)
+    await homePage.clickContact();
 
     await homePage.fillContactForm(
       "Oladapo",
@@ -53,7 +41,6 @@ await contactElement.click();
       "Automation test using Selenium JavaScript"
     );
 
-     await waitForElement(driver, homePage.submitButton);
     await homePage.submitForm();
   });
 });

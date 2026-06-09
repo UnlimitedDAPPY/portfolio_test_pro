@@ -1,10 +1,11 @@
 const { By } = require("selenium-webdriver");
-const { waitForVisible } = require("../utils/waits");
+const BasePage = require("./BasePage");
 
-
-class HomePage {
+class HomePage extends BasePage {
   constructor(driver) {
-    this.driver = driver;
+    super(driver);
+
+    this.url = "https://my-portfolio-black-iota-atxsufcgdd.vercel.app";
 
     this.contactLink = By.xpath("//a[contains(text(),'Contact')]");
     this.nameInput = By.name("name");
@@ -15,28 +16,22 @@ class HomePage {
   }
 
   async openWebsite() {
-    await this.driver.get("https://my-portfolio-black-iota-atxsufcgdd.vercel.app");
-    await this.driver.manage().window().maximize();
-
+    await this.open(this.url);
   }
 
   async clickContact() {
-    const contactElement = await this.driver.findElement(this.contactLink);
-
-    await waitForVisible(this.driver, contactElement);
-    
-    await contactElement.click();
+    await this.click(this.contactLink);
   }
 
   async fillContactForm(name, email, subject, message) {
-    await this.driver.findElement(this.nameInput).sendKeys(name);
-    await this.driver.findElement(this.emailInput).sendKeys(email);
-    await this.driver.findElement(this.subjectInput).sendKeys("Test Subject");
-    await this.driver.findElement(this.messageInput).sendKeys(message);
+    await this.type(this.nameInput, name);
+    await this.type(this.emailInput, email);
+    await this.type(this.subjectInput, subject);
+    await this.type(this.messageInput, message);
   }
 
   async submitForm() {
-    await this.driver.findElement(this.submitButton).click();
+    await this.click(this.submitButton);
   }
 }
 

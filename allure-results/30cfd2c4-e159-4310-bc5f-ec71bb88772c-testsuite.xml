@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1781003566466' stop='1781003659988'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1781003659908' status='broken' stop='1781003659908'>
+            <name>"before all" hook for "should open portfolio site and submit contact form"</name>
+            <title>"before all" hook for "should open portfolio site and submit contact form"</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timeout of 60000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\PRECISION 5530\Desktop\ALL\portfolio_test_pro\tests\ContactForm.test.js)</message>
+                <stack-trace>Error: Timeout of 60000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\PRECISION 5530\Desktop\ALL\portfolio_test_pro\tests\ContactForm.test.js)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
