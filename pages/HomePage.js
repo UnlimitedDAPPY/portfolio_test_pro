@@ -5,7 +5,8 @@ class HomePage extends BasePage {
   constructor(driver) {
     super(driver);
 
-    this.url = "https://my-portfolio-black-iota-atxsufcgdd.vercel.app";
+    this.url = "http://localhost:5173";
+    // "https://my-portfolio-black-iota-atxsufcgdd.vercel.app";
 
     this.contactLink = By.xpath("//a[contains(text(),'Contact')]");
     this.nameInput = By.name("name");

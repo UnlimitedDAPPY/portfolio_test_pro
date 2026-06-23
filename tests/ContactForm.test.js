@@ -2,6 +2,7 @@ const { expect } = require("chai");
 const buildDriver = require("../utils/driver");
 const HomePage = require("../pages/HomePage");
 const { takeScreenshot } = require("../utils/screenshot");
+const BasePage = require("../pages/BasePage")
 
 describe("Portfolio Contact Form Test", function () {
   let driver;

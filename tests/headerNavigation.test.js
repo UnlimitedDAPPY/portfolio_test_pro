@@ -2,6 +2,8 @@ const { expect } = require("chai");
 const buildDriver = require("../utils/driver");
 const HomePage = require("../pages/HomePage");
 const HeaderPage = require("../pages/HeaderPage");
+const { takeScreenshot } = require("../utils/screenshot"); 
+const { waitForElement, waitForVisible, waitForClickable } = require("../utils/waits")
 
 describe("Header Navigation", function () {
   let driver;
