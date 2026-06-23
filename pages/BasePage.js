@@ -20,7 +20,7 @@ class BasePage {
     await element.click();
   }
 
-  async type(locator, text, delay = 100) {
+  async type(locator, text, delay = 700) {
     const element = await this.waitForVisible(locator);
     await element.clear();
     await element.sendKeys(text);

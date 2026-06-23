@@ -31,9 +31,9 @@ class HomePage extends BasePage {
     await this.type(this.messageInput, message);
   }
 
-  async submitForm() {
-    await this.click(this.submitButton);
-  }
+  // async submitForm() {
+  //   await this.click(this.submitButton);
+  // }
 }
 
 module.exports = HomePage;
