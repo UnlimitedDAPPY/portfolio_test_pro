@@ -1,0 +1,95 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1782254797752' stop='1782254813803'>
+    <name>Header Navigation</name>
+    <title>Header Navigation</title>
+    <test-cases>
+        <test-case start='1782254798556' status='broken' stop='1782254801565'>
+            <name>should navigate to home page</name>
+            <title>should navigate to home page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Waiting for URL to contain "/#Home"
+                Wait timed out after 2191ms</message>
+                <stack-trace>TimeoutError: Waiting for URL to contain "/#Home"
+                Wait timed out after 2191ms
+                    at C:\Users\PRECISION 5530\Desktop\ALL\portfolio_test_pro\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782254801565' status='broken' stop='1782254804230'>
+            <name>should navigate to about page</name>
+            <title>should navigate to about page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Waiting for URL to contain "/#About"
+                Wait timed out after 2164ms</message>
+                <stack-trace>TimeoutError: Waiting for URL to contain "/#About"
+                Wait timed out after 2164ms
+                    at C:\Users\PRECISION 5530\Desktop\ALL\portfolio_test_pro\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782254804230' status='broken' stop='1782254806827'>
+            <name>should navigate to impact page</name>
+            <title>should navigate to impact page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Waiting for URL to contain "/#Impact"
+                Wait timed out after 2130ms</message>
+                <stack-trace>TimeoutError: Waiting for URL to contain "/#Impact"
+                Wait timed out after 2130ms
+                    at C:\Users\PRECISION 5530\Desktop\ALL\portfolio_test_pro\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782254806828' status='broken' stop='1782254809477'>
+            <name>should navigate to services page</name>
+            <title>should navigate to services page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Waiting for URL to contain "/#Services"
+                Wait timed out after 2194ms</message>
+                <stack-trace>TimeoutError: Waiting for URL to contain "/#Services"
+                Wait timed out after 2194ms
+                    at C:\Users\PRECISION 5530\Desktop\ALL\portfolio_test_pro\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782254809478' status='broken' stop='1782254812128'>
+            <name>should navigate to projects page</name>
+            <title>should navigate to projects page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Waiting for URL to contain "/#Projects"
+                Wait timed out after 2165ms</message>
+                <stack-trace>TimeoutError: Waiting for URL to contain "/#Projects"
+                Wait timed out after 2165ms
+                    at C:\Users\PRECISION 5530\Desktop\ALL\portfolio_test_pro\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782254812128' status='passed' stop='1782254813756'>
+            <name>should navigate to contact page</name>
+            <title>should navigate to contact page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

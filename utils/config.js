@@ -10,8 +10,8 @@ module.exports = {
   
   // Wait times
   wait: {
-    element: 10000,
-    pageLoad: 15000,
+    element: 2000,
+    pageLoad: 5000,
     scroll: 1000,
     action: process.env.TEST_SPEED === 'slow' ? 1500 : 300
   }

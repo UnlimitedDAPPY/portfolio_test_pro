@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1782249486930' stop='1782249494498'>
+    <name>Header Navigation</name>
+    <title>Header Navigation</title>
+    <test-cases>
+        <test-case start='1782249487758' status='passed' stop='1782249489625'>
+            <name>should navigate to about page</name>
+            <title>should navigate to about page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1782249489625' status='passed' stop='1782249491207'>
+            <name>should navigate to impact page</name>
+            <title>should navigate to impact page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1782249491207' status='broken' stop='1782249491379'>
+            <name>should navigate to service page</name>
+            <title>should navigate to service page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>no such element: Unable to locate element: {"method":"link text","selector":"Service"}
+                  (Session info: chrome=149.0.7827.53)</message>
+                <stack-trace>NoSuchElementError: no such element: Unable to locate element: {"method":"link text","selector":"Service"}
+                  (Session info: chrome=149.0.7827.53)
+                    at Object.throwDecodedError (node_modules\selenium-webdriver\lib\error.js:523:15)
+                    at parseHttpResponse (node_modules\selenium-webdriver\lib\http.js:526:13)
+                    at Executor.execute (node_modules\selenium-webdriver\lib\http.js:458:28)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async Driver.execute (node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+                    at async HeaderPage.waitForVisible (pages\BasePage.js:33:21)
+                    at async HeaderPage.click (pages\BasePage.js:39:21)
+                    at async HeaderPage.clickAndScrollToSection (pages\HeaderPage.js:166:5)
+                    at async HeaderPage.clickService (pages\HeaderPage.js:213:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:115:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782249491379' status='passed' stop='1782249492936'>
+            <name>should navigate to projects page</name>
+            <title>should navigate to projects page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1782249492936' status='passed' stop='1782249494448'>
+            <name>should navigate to contact page</name>
+            <title>should navigate to contact page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -85,8 +85,8 @@ describe("Header Navigation", function () {
 
   before(async function() {
     driver = await buildDriver();
-    homePage = new HomePage(driver);
-    headerPage = new HeaderPage(driver);
+    homePage = new HomePage(driver, 'normal');
+    headerPage = new HeaderPage(driver, 'normal');
   });
 
   after(async function() {
@@ -99,22 +99,28 @@ describe("Header Navigation", function () {
     await homePage.openWebsite();
   });
 
-  it("should navigate to about page", async function() {
+   it("should navigate to home page", async function() {
+    await headerPage.clickHome();
+    const url = await driver.getCurrentUrl();
+    expect(url).to.include("/#home");
+  });
+
+ it("should navigate to about page", async function () {
     await headerPage.clickAbout();
     const url = await driver.getCurrentUrl();
     expect(url).to.include("/#about");
   });
 
-  it("should navigate to impact page", async function() {
+ it("should navigate to impact page", async function () {
     await headerPage.clickImpact();
     const url = await driver.getCurrentUrl();
     expect(url).to.include("/#impact");
   });
 
-  it("should navigate to service page", async function() {
-    await headerPage.clickService();
+  it("should navigate to services page", async function() {
+    await headerPage.clickServices();
     const url = await driver.getCurrentUrl();
-    expect(url).to.include("/#service");
+    expect(url).to.include("/#services");
   });
 
   it("should navigate to projects page", async function() {

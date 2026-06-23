@@ -1,5 +1,7 @@
+const {expect} = require("chai");
 const { By, until } = require("selenium-webdriver");
 const BasePage = require("./BasePage");
+const config = require("../utils/config");
 
 // class HeaderPage extends BasePage {
 //   constructor(driver) {
@@ -140,24 +142,33 @@ const BasePage = require("./BasePage");
 
   
 class HeaderPage extends BasePage {
-  constructor(driver) {
-    super(driver);
+  constructor(driver, speed = config.speed) {
+    super(driver, speed);
 
+    this.home = By.linkText("Home");
     this.about = By.linkText("About");
     this.impact = By.linkText("Impact");
-    this.service = By.linkText("Service");
+    this.services = By.linkText("Services");
     this.projects = By.linkText("Projects");
     this.contact = By.linkText("Contact");
 
     this.headerContainer = By.tagName("header");
   }
 
+   async clickAndScrollToSection(linkLocator, sectionId, sectionSelector) {
+    await this.click(linkLocator);
+
+    // ✅ MUST use lowercase
+    const sectionIdLower = sectionId.toLowerCase();
+    await this.driver.wait(until.urlContains(`/#${sectionIdLower}`), config.wait.element);
+   }
+
   async waitForHeader() {
-    await this.driver.wait(until.elementLocated(this.headerContainer), 10000);
+    await this.driver.wait(until.elementLocated(this.headerContainer), config.wait.element);
     
     // ✅ Fixed: Define 'header' variable
     const header = await this.driver.findElement(this.headerContainer);
-    await this.driver.wait(until.elementIsVisible(header), 10000);
+    await this.driver.wait(until.elementIsVisible(header), config.wait.element);
   }
 
   // ✅ Generic method to click and scroll to section
@@ -166,15 +177,15 @@ class HeaderPage extends BasePage {
     await this.click(linkLocator);
 
     // Wait for URL to include the section
-    await this.driver.wait(until.urlContains(`/#${sectionId}`), 10000);
+    await this.driver.wait(until.urlContains(`/#${sectionId}`), config.wait.element);
 
     // Wait for section to be located
     const section = By.css(sectionSelector);
-    await this.driver.wait(until.elementLocated(section), 10000);
+    await this.driver.wait(until.elementLocated(section), config.wait.element);
     
     // Wait for section to be visible
     const element = await this.driver.findElement(section);
-    await this.driver.wait(until.elementIsVisible(element), 10000);
+    await this.driver.wait(until.elementIsVisible(element), config.wait.element);
 
     // ✅ Scroll to the section
     await this.driver.executeScript(
@@ -193,10 +204,18 @@ class HeaderPage extends BasePage {
   }
 
   // ✅ Navigation methods using the generic method
+   async clickHome() {
+    await this.clickAndScrollToSection(
+      this.home,
+      "Home",
+      "#home, section.home"
+    );
+  }
+  
   async clickAbout() {
     await this.clickAndScrollToSection(
       this.about,
-      "about",
+      "About",
       "#about, section.about"
     );
   }
@@ -204,23 +223,23 @@ class HeaderPage extends BasePage {
   async clickImpact() {
     await this.clickAndScrollToSection(
       this.impact,
-      "impact",
+      "Impact",
       "#impact, section.impact"
     );
   }
 
-  async clickService() {
+  async clickServices() {
     await this.clickAndScrollToSection(
-      this.service,
-      "service",
-      "#service, section.service"
+      this.services,
+      "Services",
+      "#services, section.services"
     );
   }
 
   async clickProjects() {
     await this.clickAndScrollToSection(
       this.projects,
-      "projects",
+      "Projects",
       "#projects, section.projects"
     );
   }
