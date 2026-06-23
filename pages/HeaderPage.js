@@ -1,5 +1,5 @@
 const { By, until } = require("selenium-webdriver");
-const { waitForElement, waitForVisible } = require("../utils/waits");
+// const { waitForElement, waitForVisible } = require("../utils/waits");
 const BasePage = require("./BasePage");
 
 class HeaderPage extends BasePage {
