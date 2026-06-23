@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1782230184816' stop='1782230188082'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1782230185820' status='broken' stop='1782230188027'>
+            <name>should open portfolio site and submit contact form</name>
+            <title>should open portfolio site and submit contact form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>homePage.waitForContactForm is not a function</message>
+                <stack-trace>TypeError: homePage.waitForContactForm is not a function
+                    at Context.&lt;anonymous> (tests\ContactForm.test.js:39:20)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

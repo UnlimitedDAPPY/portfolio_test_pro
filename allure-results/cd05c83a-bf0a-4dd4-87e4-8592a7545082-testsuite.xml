@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1782227700207' stop='1782227701664'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1782227700921' status='broken' stop='1782227701616'>
+            <name>should open portfolio site and submit contact form</name>
+            <title>should open portfolio site and submit contact form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>By is not defined</message>
+                <stack-trace>ReferenceError: By is not defined
+                    at HomePage.open (pages\BasePage.js:63:26)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HomePage.openWebsite (pages\HomePage.js:20:5)
+                    at async Context.&lt;anonymous> (tests\ContactForm.test.js:29:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

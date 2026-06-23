@@ -1,19 +1,20 @@
-const { By } = require("selenium-webdriver");
+const { until, By } = require("selenium-webdriver");
 const BasePage = require("./BasePage");
+const config = require("../utils/config");
 
 class HomePage extends BasePage {
-  constructor(driver) {
-    super(driver);
+  constructor(driver, speed = config.speed) {
+    super(driver, speed);
 
-    this.url = "http://localhost:5173";
+    this.url = config.url;
     // "https://my-portfolio-black-iota-atxsufcgdd.vercel.app";
 
-    this.contactLink = By.xpath("//a[contains(text(),'Contact')]");
+    this.contactLink = By.linkText("Contact");
     this.nameInput = By.name("name");
     this.emailInput = By.name("email");
     this.subjectInput = By.name("subject");
     this.messageInput = By.name("message");
-    this.submitButton = By.xpath("//*[@id='contact']/div/div[2]/form/button");
+    this.submitButton = By.linkText("Send Message");
   }
 
   async openWebsite() {
@@ -22,6 +23,18 @@ class HomePage extends BasePage {
 
   async clickContact() {
     await this.click(this.contactLink);
+  }
+
+async waitForContactForm() {
+    try {
+      await this.driver.wait(until.elementLocated(this.nameInput), config.wait.element);
+      const nameField = await this.driver.findElement(this.nameInput);
+      await this.driver.wait(until.elementIsVisible(nameField), config.wait.element);
+      console.log("✅ Contact form loaded successfully");
+    } catch (error) {
+      console.log("❌ Contact form not found, trying alternative...");
+      await this.driver.wait(until.elementLocated(By.css("input, textarea")), config.wait.element);
+    }
   }
 
   async fillContactForm(name, email, subject, message) {

@@ -1,7 +1,144 @@
 const { By, until } = require("selenium-webdriver");
-// const { waitForElement, waitForVisible } = require("../utils/waits");
 const BasePage = require("./BasePage");
 
+// class HeaderPage extends BasePage {
+//   constructor(driver) {
+//     super(driver);
+
+//     this.about = By.linkText("About");
+//     this.impact = By.linkText("Impact");
+//     this.service = By.linkText("Service");
+//     this.projects = By.linkText("Projects");
+//     this.contact = By.linkText("Contact");
+
+//     this.headerContainer = By.tagName("header");
+//   }
+
+//   async waitForHeader() {
+//     await this.driver.wait(until.elementLocated(this.headerContainer), 10000);
+
+//      await this.driver.wait(
+//       until.elementIsVisible(header),
+//       10000
+//     );
+//   }
+
+//   // async clickNav(locator, urlPart) {
+//   //   await this.waitForHeader();
+//   //   await this.click(locator);
+
+//   //   await this.driver.wait(async () => {
+//   //     const url = await this.driver.getCurrentUrl();
+//   //     return url.includes(urlPart);
+//   //   }, 10000);
+//   // }
+
+//   async clickAndWait(locator, urlPart, anchorSelector) {
+//   await this.click(locator);
+
+//   await this.driver.wait(until.urlContains(urlPart), 10000);
+
+//   const element = await this.driver.findElement(anchorSelector);
+
+//   await this.driver.wait(until.elementIsVisible(element), 10000);
+// }
+
+// async clickAbout() {
+//   await this.click(this.about);
+
+//   const section = By.css("#about, section.about");
+
+//   await this.driver.wait(
+//     until.elementLocated(section),
+//     10000
+//   );
+
+//   await this.driver.wait(
+//     until.elementIsVisible(await this.driver.findElement(section)),
+//     10000
+//   );
+// }
+
+//   // async clickImpact() {
+//   //   await this.clickNav(this.impact, "/impact");
+//   // }
+
+// async clickImpact() {
+//   await this.click(this.impact);
+
+//   const section = By.css("#impact, section.impact");
+
+//   await this.driver.wait(
+//     until.elementLocated(section),
+//     10000
+//   );
+
+//   await this.driver.wait(
+//     until.elementIsVisible(await this.driver.findElement(section)),
+//     10000
+//   );
+// }
+
+// async clickService() {
+//   await this.click(this.service);
+
+//   const section = By.css("#service, section.service");
+
+//   await this.driver.wait(
+//     until.elementLocated(section),
+//     10000
+//   );
+
+//   await this.driver.wait(
+//     until.elementIsVisible(await this.driver.findElement(section)),
+//     10000
+//   );
+// }
+
+// async clickProjects() {
+//   await this.click(this.projects);
+
+//   const section = By.css("#projects, section.projects");
+
+//   await this.driver.wait(
+//     until.elementLocated(section),
+//     10000
+//   );
+
+//   await this.driver.wait(
+//     until.elementIsVisible(await this.driver.findElement(section)),
+//     10000
+//   );
+// }
+
+// async clickContact() {
+//   await this.click(this.contact);
+
+//   const section = By.css("#contact, section.contact");
+
+//   await this.driver.wait(
+//     until.elementLocated(section),
+//     10000
+//   );
+
+//   await this.driver.wait(
+//     until.elementIsVisible(await this.driver.findElement(section)),
+//     10000
+//   );
+// }
+// }
+
+  // async clickContact() {
+  //   await this.clickNav(this.contact, "/contact");
+  // }
+
+  // async clickContact() {
+  //   await this.waitForHeader();
+  //   await this.click(this.contact);
+  // }
+
+
+  
 class HeaderPage extends BasePage {
   constructor(driver) {
     super(driver);
@@ -17,32 +154,85 @@ class HeaderPage extends BasePage {
 
   async waitForHeader() {
     await this.driver.wait(until.elementLocated(this.headerContainer), 10000);
+    
+    // ✅ Fixed: Define 'header' variable
+    const header = await this.driver.findElement(this.headerContainer);
+    await this.driver.wait(until.elementIsVisible(header), 10000);
   }
 
+  // ✅ Generic method to click and scroll to section
+  async clickAndScrollToSection(linkLocator, sectionId, sectionSelector) {
+    // Click the navigation link
+    await this.click(linkLocator);
+
+    // Wait for URL to include the section
+    await this.driver.wait(until.urlContains(`/#${sectionId}`), 10000);
+
+    // Wait for section to be located
+    const section = By.css(sectionSelector);
+    await this.driver.wait(until.elementLocated(section), 10000);
+    
+    // Wait for section to be visible
+    const element = await this.driver.findElement(section);
+    await this.driver.wait(until.elementIsVisible(element), 10000);
+
+    // ✅ Scroll to the section
+    await this.driver.executeScript(
+      `arguments[0].scrollIntoView({behavior: 'smooth', block: 'start'});`,
+      element
+    );
+
+    // Wait for scroll animation to complete
+    await this.driver.sleep(1000);
+
+    // ✅ Verify URL contains the section
+    const url = await this.driver.getCurrentUrl();
+    if (!url.includes(`/#${sectionId}`)) {
+      throw new Error(`URL does not contain /#${sectionId}`);
+    }
+  }
+
+  // ✅ Navigation methods using the generic method
   async clickAbout() {
-    await this.waitForHeader();
-    await this.click(this.about);
+    await this.clickAndScrollToSection(
+      this.about,
+      "about",
+      "#about, section.about"
+    );
   }
 
   async clickImpact() {
-    await this.waitForHeader();
-    await this.click(this.impact);
+    await this.clickAndScrollToSection(
+      this.impact,
+      "impact",
+      "#impact, section.impact"
+    );
   }
 
   async clickService() {
-    await this.waitForHeader();
-    await this.click(this.service);
+    await this.clickAndScrollToSection(
+      this.service,
+      "service",
+      "#service, section.service"
+    );
   }
 
   async clickProjects() {
-    await this.waitForHeader();
-    await this.click(this.projects);
+    await this.clickAndScrollToSection(
+      this.projects,
+      "projects",
+      "#projects, section.projects"
+    );
   }
 
   async clickContact() {
-    await this.waitForHeader();
-    await this.click(this.contact);
+    await this.clickAndScrollToSection(
+      this.contact,
+      "contact",
+      "#contact, section.contact"
+    );
   }
 }
+
 
 module.exports = HeaderPage;

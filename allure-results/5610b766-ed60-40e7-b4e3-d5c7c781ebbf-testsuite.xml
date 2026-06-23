@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1782222550446' stop='1782222551191'>
+    <name>Header Navigation</name>
+    <title>Header Navigation</title>
+    <test-cases>
+        <test-case start='1782222551149' status='broken' stop='1782222551149'>
+            <name>"before all" hook for "should navigate to about page"</name>
+            <title>"before all" hook for "should navigate to about page"</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>BasePage is not a constructor</message>
+                <stack-trace>TypeError: BasePage is not a constructor
+                    at Context.&lt;anonymous> (tests\headerNavigation.test.js:20:16)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

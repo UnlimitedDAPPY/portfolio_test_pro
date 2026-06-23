@@ -1,0 +1,92 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1782225449359' stop='1782225451418'>
+    <name>Header Navigation</name>
+    <title>Header Navigation</title>
+    <test-cases>
+        <test-case start='1782225450189' status='broken' stop='1782225450670'>
+            <name>should navigate to about page</name>
+            <title>should navigate to about page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>header is not defined</message>
+                <stack-trace>ReferenceError: header is not defined
+                    at HeaderPage.waitForHeader (pages\HeaderPage.js:21:30)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HeaderPage.clickNav (pages\HeaderPage.js:27:5)
+                    at async HeaderPage.clickAbout (pages\HeaderPage.js:37:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:27:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782225450670' status='broken' stop='1782225450878'>
+            <name>should navigate to impact page</name>
+            <title>should navigate to impact page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>header is not defined</message>
+                <stack-trace>ReferenceError: header is not defined
+                    at HeaderPage.waitForHeader (pages\HeaderPage.js:21:30)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HeaderPage.clickNav (pages\HeaderPage.js:27:5)
+                    at async HeaderPage.clickImpact (pages\HeaderPage.js:41:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:37:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782225450878' status='broken' stop='1782225451043'>
+            <name>should navigate to service page</name>
+            <title>should navigate to service page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>header is not defined</message>
+                <stack-trace>ReferenceError: header is not defined
+                    at HeaderPage.waitForHeader (pages\HeaderPage.js:21:30)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HeaderPage.clickNav (pages\HeaderPage.js:27:5)
+                    at async HeaderPage.clickService (pages\HeaderPage.js:45:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:47:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782225451043' status='broken' stop='1782225451209'>
+            <name>should navigate to projects page</name>
+            <title>should navigate to projects page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>header is not defined</message>
+                <stack-trace>ReferenceError: header is not defined
+                    at HeaderPage.waitForHeader (pages\HeaderPage.js:21:30)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HeaderPage.clickNav (pages\HeaderPage.js:27:5)
+                    at async HeaderPage.clickProjects (pages\HeaderPage.js:49:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:57:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782225451209' status='broken' stop='1782225451369'>
+            <name>should navigate to contact page</name>
+            <title>should navigate to contact page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>header is not defined</message>
+                <stack-trace>ReferenceError: header is not defined
+                    at HeaderPage.waitForHeader (pages\HeaderPage.js:21:30)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HeaderPage.clickNav (pages\HeaderPage.js:27:5)
+                    at async HeaderPage.clickContact (pages\HeaderPage.js:53:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:67:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

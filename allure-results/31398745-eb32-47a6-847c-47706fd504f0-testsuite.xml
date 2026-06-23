@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1782225470377' stop='1782225472678'>
+    <name>Portfolio Contact Form Test</name>
+    <title>Portfolio Contact Form Test</title>
+    <test-cases>
+        <test-case start='1782225471095' status='broken' stop='1782225472624'>
+            <name>should open portfolio site and submit contact form</name>
+            <title>should open portfolio site and submit contact form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>homePage.submitForm is not a function</message>
+                <stack-trace>TypeError: homePage.submitForm is not a function
+                    at Context.&lt;anonymous> (tests\ContactForm.test.js:48:20)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

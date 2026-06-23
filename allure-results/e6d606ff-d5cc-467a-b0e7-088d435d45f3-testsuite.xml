@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1782227677895' stop='1782227679907'>
+    <name>Header Navigation</name>
+    <title>Header Navigation</title>
+    <test-cases>
+        <test-case start='1782227678620' status='broken' stop='1782227679069'>
+            <name>should navigate to about page</name>
+            <title>should navigate to about page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>By is not defined</message>
+                <stack-trace>ReferenceError: By is not defined
+                    at HomePage.open (pages\BasePage.js:63:26)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HomePage.openWebsite (pages\HomePage.js:20:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:26:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782227679069' status='broken' stop='1782227679240'>
+            <name>should navigate to impact page</name>
+            <title>should navigate to impact page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>By is not defined</message>
+                <stack-trace>ReferenceError: By is not defined
+                    at HomePage.open (pages\BasePage.js:63:26)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HomePage.openWebsite (pages\HomePage.js:20:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:36:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782227679240' status='broken' stop='1782227679393'>
+            <name>should navigate to service page</name>
+            <title>should navigate to service page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>By is not defined</message>
+                <stack-trace>ReferenceError: By is not defined
+                    at HomePage.open (pages\BasePage.js:63:26)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HomePage.openWebsite (pages\HomePage.js:20:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:46:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782227679393' status='broken' stop='1782227679701'>
+            <name>should navigate to projects page</name>
+            <title>should navigate to projects page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>By is not defined</message>
+                <stack-trace>ReferenceError: By is not defined
+                    at HomePage.open (pages\BasePage.js:63:26)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HomePage.openWebsite (pages\HomePage.js:20:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:56:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1782227679701' status='broken' stop='1782227679860'>
+            <name>should navigate to contact page</name>
+            <title>should navigate to contact page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>By is not defined</message>
+                <stack-trace>ReferenceError: By is not defined
+                    at HomePage.open (pages\BasePage.js:63:26)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+                    at async HomePage.openWebsite (pages\HomePage.js:20:5)
+                    at async Context.&lt;anonymous> (tests\headerNavigation.test.js:66:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
