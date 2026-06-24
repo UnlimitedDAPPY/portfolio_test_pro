@@ -13,7 +13,7 @@
   "description": "",
   "devDependencies": {
     "allure-commandline": "^2.41.0",
-    "chai": "4.3.7",
+    "chai": "^4.3.7",
     "mocha": "^11.7.5",
     "mocha-allure-reporter": "^1.4.0",
     "selenium-webdriver": "^4.44.0"
